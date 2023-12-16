@@ -62,7 +62,6 @@ export default function Layout({ active, children }) {
             {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
             <Typography
               variant="h1"
-              noWrap
               component="a"
               href="/"
               sx={(theme) => ({
@@ -109,12 +108,12 @@ export default function Layout({ active, children }) {
                 keepMounted
                 transformOrigin={{
                   vertical: 'top',
-                  horizontal: 'left',
+                  horizontal: 'right',
                 }}
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
                 sx={{
-                  display: { xs: 'block', md: 'none' },
+                  display: { xs: 'flex', md: 'none' },
                 }}
               >
                 {pages.map((page) => (

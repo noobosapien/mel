@@ -30,18 +30,18 @@ export default function Home() {
         <Grid item sx={{borderRadius: '0%', height: '80vh'}} >
           <Grid container>
           <Grid item>
-            <Box sx={{position:'relative', width: '40rem'}}>
-              <Card sx={{position:"absolute",top: matchesMd ? '1rem':'0rem', left:matchesMd ? '6rem': '0rem'}}> 
+            <Box sx={{position:'relative', width: matchesMd ? '100vw': '50vw'}}>
+              <Card sx={{position:"absolute",top: matchesMd ? '1rem':'0rem', left:matchesMd ? '1rem': '0rem'}}> 
                 <CardMedia
                 component="img"
                 alt="work"
-                height={matchesMd ? "240" : '340'}
+                height={matchesMd ? "200" : '340'}
                 image={ph.src}
                 sx={{borderRadius: '2rem'}}
               />
               </Card>
 
-              <Card sx={{position:"absolute", top: '18rem', left: '20rem'}}> 
+              <Card sx={{position:"absolute", top: '18rem', left: '16rem'}}> 
                 <CardMedia
                 component="img"
                 alt="work"
@@ -51,11 +51,11 @@ export default function Home() {
               />
               </Card>
 
-              <Card sx={{position:"absolute", top: matchesMd ? '10rem':'20rem', left:matchesMd ? '10rem': '-5rem'}}> 
+              <Card sx={{position:"absolute", top: matchesMd ? '10rem':'20rem', left:matchesMd ? '5rem': '-5rem'}}> 
                 <CardMedia
                 component="img"
                 alt="work"
-                height={matchesMd ? "300" : '380'}
+                height={matchesMd ? "260" : '380'}
                 image={ph1.src}
                 sx={{borderRadius: '2rem'}}
               />
