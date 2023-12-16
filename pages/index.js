@@ -1,6 +1,8 @@
 import { Inter } from '@next/font/google';
 import Layout from '@/components/Layout';
 import { Box, Card, CardMedia, Grid, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import ph from '@/public/1.png'
 import ph1 from '@/public/2.png'
 import ph2 from '@/public/3.png'
@@ -13,6 +15,9 @@ import ph6 from '@/public/7.png'
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
+  const theme = useTheme();
+  const matchesMd = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
     <Layout>
       <Grid
@@ -25,12 +30,12 @@ export default function Home() {
         <Grid item sx={{borderRadius: '0%', height: '80vh'}} >
           <Grid container>
           <Grid item>
-            <Box sx={{position:'relative', width: ' 40rem'}}>
-              <Card sx={{position:"absolute"}}> 
+            <Box sx={{position:'relative', width: '40rem'}}>
+              <Card sx={{position:"absolute",top: matchesMd ? '1rem':'0rem', left:matchesMd ? '6rem': '0rem'}}> 
                 <CardMedia
                 component="img"
                 alt="work"
-                height="340"
+                height={matchesMd ? "240" : '340'}
                 image={ph.src}
                 sx={{borderRadius: '2rem'}}
               />
@@ -40,17 +45,17 @@ export default function Home() {
                 <CardMedia
                 component="img"
                 alt="work"
-                height="320"
+                height={matchesMd ? "240" : '340'}
                 image={ph2.src}
                 sx={{borderRadius: '2rem'}}
               />
               </Card>
 
-              <Card sx={{position:"absolute", top: '20rem', left: '-5rem'}}> 
+              <Card sx={{position:"absolute", top: matchesMd ? '10rem':'20rem', left:matchesMd ? '10rem': '-5rem'}}> 
                 <CardMedia
                 component="img"
                 alt="work"
-                height="440"
+                height={matchesMd ? "300" : '380'}
                 image={ph1.src}
                 sx={{borderRadius: '2rem'}}
               />
@@ -63,13 +68,13 @@ export default function Home() {
           </Grid>
 
           <Grid item>
-            <Grid container justifyContent={"center"} alignItems={"center"} direction={'column'}>
+            <Grid container justifyContent={"center"} alignItems={"center"} direction={'column'} spacing={10}>
             <Grid item>
-              <Typography variant="h3">Auckland based</Typography>
+              <Typography variant="h3" textAlign={'center'}>Auckland based</Typography>
             </Grid>
 
             <Grid item>
-              <Typography variant='h4' sx={{fontWeight: '100', fontSize: '2rem'}}>Welders/Fabricators</Typography>
+              <Typography variant='h4' textAlign={'center'} sx={{fontWeight: '100', fontSize: '2rem'}}>Welders/Fabricators</Typography>
             </Grid>
             </Grid>
           </Grid>
