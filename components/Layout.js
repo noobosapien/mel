@@ -19,7 +19,7 @@ import React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useRouter } from 'next/router';
 
-const pages = ["Services", "Our Work", "About Us", "Contact"];
+const pages = [{name:"Services", url: "/services"}, {name: "Our Work", url: '/work'}, {name: "About Us", url: '/about'}, {name: "Contact", url: '/contact'}];
 
 export default function Layout({ active, children }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -37,6 +37,8 @@ export default function Layout({ active, children }) {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+ 
 
   return (
     <>
@@ -116,8 +118,8 @@ export default function Layout({ active, children }) {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                  <MenuItem key={page.name} onClick={handleRouteChange(page.url)}>
+                    <Typography textAlign="center">{page.name}</Typography>
                   </MenuItem>
                 ))}
               </Menu>

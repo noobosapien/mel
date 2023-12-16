@@ -172,7 +172,7 @@ export default function Home() {
                       <CardMedia
                       component="img"
                       alt="work"
-                      height="440"
+                      height={matchesMd ? "320": "440"}
                       image={ph3.src}
                       sx={{borderRadius: '1rem'}}
                       />
@@ -185,7 +185,7 @@ export default function Home() {
                       <CardMedia
                       component="img"
                       alt="work"
-                      height="440"
+                      height={matchesMd ? "320": "440"}
                       image={ph4.src}
                       sx={{borderRadius: '1rem'}}
                     />
@@ -203,7 +203,7 @@ export default function Home() {
                       <CardMedia
                       component="img"
                       alt="work"
-                      height="440"
+                      height={matchesMd ? "320": "440"}
                       image={ph5.src}
                       sx={{borderRadius: '1rem'}}
                     />
@@ -216,7 +216,7 @@ export default function Home() {
                       <CardMedia
                       component="img"
                       alt="work"
-                      height="440"
+                      height={matchesMd ? "320": "440"}
                       image={ph6.src}
                       sx={{borderRadius: '1rem'}}
                     />
