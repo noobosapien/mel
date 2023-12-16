@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Container,
+  Grid,
   IconButton,
   Menu,
   MenuItem,
@@ -182,7 +183,78 @@ export default function Layout({ active, children }) {
 
       {children}
 
-      <footer></footer>
+      <footer>
+        <Box sx={{borderTop: 'thick double #323a42', padding: '3rem 1rem'}}>
+          <Grid container justifyContent={'space-between'} spacing={10}>
+            <Grid item>
+              <Typography
+              sx={(theme) => ({
+                mr: 2,
+                flexGrow: 1,
+                display: { xs: 'flex' },
+                fontSize: { xs: '1.5rem', md: '1.5rem' },
+                fontWeight: 300,
+                letterSpacing: '.3rem',
+                // color: '#fff',
+                textDecoration: 'none',
+              })}
+              >Moorthi Engineering Limited</Typography>
+            </Grid>
+
+            <Grid item>
+              <Grid container direction={'column'}>
+                <Grid item>
+                  <Typography>
+                    Hours
+                  </Typography>
+                </Grid>
+
+                <Grid item>
+                  <Typography>
+                  Monday - Friday: 
+                  </Typography>
+                </Grid>
+
+                <Grid item>
+                  <Typography>
+                  7.00am - 4.00pm
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <Grid item>
+              <Grid container direction={'column'}>
+                <Grid item>
+                  <Typography>
+                    Contact
+                  </Typography>
+                </Grid>
+
+                <Grid item>
+                  <Typography>
+                  Email: admin@moorthi.co.nz
+                  </Typography>
+                </Grid>
+
+                <Grid item>
+                  <Typography>
+                  Telephone: 0900000
+                  </Typography>
+                </Grid>
+
+                <Grid item>
+                  <Typography>
+                  Mobile: 0200000000
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+
+          </Grid>
+
+        </Box>
+      </footer>
     </>
   );
 }

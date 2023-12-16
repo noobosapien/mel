@@ -4,6 +4,10 @@ import { Box, Card, CardMedia, Grid, Typography } from '@mui/material';
 import ph from '@/public/1.png'
 import ph1 from '@/public/2.png'
 import ph2 from '@/public/3.png'
+import ph3 from '@/public/4.png'
+import ph4 from '@/public/5.png'
+import ph5 from '@/public/6.png'
+import ph6 from '@/public/7.png'
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -72,14 +76,157 @@ export default function Home() {
 
           <Grid item xs={12} sx={{marginBottom: '10rem'}}/>
 
-          <Grid item container justifyContent={'center'}>
+          <Grid item container justifyContent={'center'} alignItems={'center'} direction={'column'} spacing={10}>
             <Grid item>
-              <Typography variant='h5' sx={{fontWeight: '100'}} textAlign={'center'}>
+              <Typography variant='h3' sx={{fontSize: '2.5rem', fontWeight: 700}} textAlign={'center'}>
                 We work with clients of a range of industries.
               </Typography>
             </Grid>
+
+            <Grid item>
+              <Grid container justifyContent={'center'} spacing={10}>
+                <Grid item>
+                  <Grid container direction={'column'} spacing={8}>
+                    <Grid item>
+                      <Typography textAlign='center' sx={{fontWeight: 400, fontSize: '1.5rem'}}>Marine</Typography>
+                    </Grid>
+
+                    <Grid item>
+                      <Typography textAlign='center' sx={{fontWeight: 400, fontSize: '1.5rem'}}>Horticulture</Typography>
+                    </Grid>
+
+                    <Grid item>
+                      <Typography textAlign='center' sx={{fontWeight: 400, fontSize: '1.5rem'}}>Architectural</Typography>
+                    </Grid>
+
+                    <Grid item>
+                      <Typography textAlign='center' sx={{fontWeight: 400, fontSize: '1.5rem'}}>Aquaculture</Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+
+
+                <Grid item>
+                  <Grid container direction={'column'} spacing={8}>
+                    <Grid item>
+                      <Typography textAlign='center' sx={{fontWeight: 400, fontSize: '1.5rem'}}>Aviation</Typography>
+                    </Grid>
+
+                    <Grid item>
+                      <Typography textAlign='center' sx={{fontWeight: 400, fontSize: '1.5rem'}}>Medical</Typography>
+                    </Grid>
+
+                    <Grid item>
+                      <Typography textAlign='center' sx={{fontWeight: 400, fontSize: '1.5rem'}}>Forestry</Typography>
+                    </Grid>
+
+                    <Grid item>
+                      <Typography textAlign='center' sx={{fontWeight: 400, fontSize: '1.5rem'}}>Scientific Research </Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+
+                <Grid item>
+                  <Grid container direction={'column'} spacing={8}>
+                    <Grid item>
+                      <Typography textAlign='center' sx={{fontWeight: 400, fontSize: '1.5rem'}}>Hospitality</Typography>
+                    </Grid>
+
+                    <Grid item>
+                      <Typography textAlign='center' sx={{fontWeight: 400, fontSize: '1.5rem'}}>Food processing</Typography>
+                    </Grid>
+
+                    <Grid item>
+                      <Typography textAlign='center' sx={{fontWeight: 400, fontSize: '1.5rem'}}>Farming</Typography>
+                    </Grid>
+
+                    <Grid item>
+                      <Typography textAlign='center' sx={{fontWeight: 400, fontSize: '1.5rem'}}>Artistic</Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
           </Grid>
 
+          <Grid item xs={12} sx={{marginBottom: '10rem'}}/>
+
+          <Grid item container direction={'column'} justifyContent={'center'} alignItems={'center'}>
+            <Grid item>
+              <Typography variant='h3' sx={{fontSize: '2.5rem', fontWeight: 700}}>Featured Work</Typography>
+            </Grid>
+
+            <Grid item sx={{marginBottom: '10rem'}}/>
+
+            <Grid item container justifyContent={'center'} spacing={10}>
+              <Grid item>
+                <Grid container direction={'column'} spacing={10}>
+                  <Grid item>
+                    {/* Placeholder */}
+                    <Card > 
+                      <CardMedia
+                      component="img"
+                      alt="work"
+                      height="440"
+                      image={ph3.src}
+                      sx={{borderRadius: '1rem'}}
+                      />
+                    </Card>
+                  </Grid>
+
+                  <Grid item>
+                    {/* Placeholder */}
+                    <Card > 
+                      <CardMedia
+                      component="img"
+                      alt="work"
+                      height="440"
+                      image={ph4.src}
+                      sx={{borderRadius: '1rem'}}
+                    />
+                    </Card>
+                  </Grid>
+                </Grid>
+              </Grid>
+
+              <Grid item>
+                <Grid container direction={'column'} spacing={10}>
+                  <Grid item>
+                    {/* Placeholder */}
+
+                    <Card > 
+                      <CardMedia
+                      component="img"
+                      alt="work"
+                      height="440"
+                      image={ph5.src}
+                      sx={{borderRadius: '1rem'}}
+                    />
+                    </Card>
+                  </Grid>
+
+                  <Grid item>
+                    {/* Placeholder */}
+                    <Card > 
+                      <CardMedia
+                      component="img"
+                      alt="work"
+                      height="440"
+                      image={ph6.src}
+                      sx={{borderRadius: '1rem'}}
+                    />
+                    </Card>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+
+          <Grid item xs={12} sx={{marginBottom: '10rem'}}/>
+
+          <Grid item>
+
+          </Grid>
         
       </Grid>
     </Layout>
