@@ -23,8 +23,8 @@ export default function Work() {
           spacing={10}
           sx={{ paddingTop: "4rem" }}
         >
-          {images.map((img) => (
-            <Grid item>
+          {images.map((img, i) => (
+            <Grid item key={`${img}-i`}>
               <WorkCard image={img.src} />
             </Grid>
           ))}

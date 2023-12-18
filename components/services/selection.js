@@ -54,7 +54,7 @@ export default function Selection({ names }) {
             variant="outlined"
             startIcon={<MenuIcon />}
           >
-            View Services
+            Services menu
           </Button>
           <Drawer
             anchor={anchor}
