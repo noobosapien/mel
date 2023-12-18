@@ -13,13 +13,18 @@ import {
   Toolbar,
   Tooltip,
   Typography,
-} from '@mui/material';
-import Head from 'next/head';
-import React from 'react';
-import MenuIcon from '@mui/icons-material/Menu';
-import { useRouter } from 'next/router';
+} from "@mui/material";
+import Head from "next/head";
+import React from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import { useRouter } from "next/router";
 
-const pages = [{name:"Services", url: "/services"}, {name: "Our Work", url: '/work'}, {name: "About Us", url: '/about'}, {name: "Contact", url: '/contact'}];
+const pages = [
+  { name: "Services", url: "/services" },
+  { name: "Our Work", url: "/work" },
+  { name: "About Us", url: "/about" },
+  { name: "Contact", url: "/contact" },
+];
 
 export default function Layout({ active, children }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -37,8 +42,6 @@ export default function Layout({ active, children }) {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
- 
 
   return (
     <>
@@ -67,12 +70,12 @@ export default function Layout({ active, children }) {
               sx={(theme) => ({
                 mr: 2,
                 flexGrow: 1,
-                display: { xs: 'flex' },
-                fontSize: { xs: '1.5rem', md: '1.5rem' },
+                display: { xs: "flex" },
+                fontSize: { xs: "1.5rem", md: "1.5rem" },
                 fontWeight: 300,
-                letterSpacing: '.3rem',
+                letterSpacing: ".3rem",
                 // color: '#fff',
-                textDecoration: 'none',
+                textDecoration: "none",
               })}
             >
               Moorthi Engineering Limited
@@ -82,11 +85,11 @@ export default function Layout({ active, children }) {
               sx={(theme) => ({
                 mr: 2,
                 flexGrow: 10,
-                display: { xs: 'flex' },
+                display: { xs: "flex" },
               })}
             />
 
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -94,7 +97,7 @@ export default function Layout({ active, children }) {
                 aria-haspopup="true"
                 onClick={handleOpenNavMenu}
                 color="inherit"
-                sx={{ color: '#d6d6d6' }}
+                sx={{ color: "#d6d6d6" }}
               >
                 <MenuIcon />
               </IconButton>
@@ -102,22 +105,25 @@ export default function Layout({ active, children }) {
                 id="menu-appbar"
                 anchorEl={anchorElNav}
                 anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'left',
+                  vertical: "bottom",
+                  horizontal: "left",
                 }}
                 keepMounted
                 transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
+                  vertical: "top",
+                  horizontal: "right",
                 }}
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
                 sx={{
-                  display: { xs: 'flex', md: 'none' },
+                  display: { xs: "flex", md: "none" },
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page.name} onClick={handleRouteChange(page.url)}>
+                  <MenuItem
+                    key={page.name}
+                    onClick={handleRouteChange(page.url)}
+                  >
                     <Typography textAlign="center">{page.name}</Typography>
                   </MenuItem>
                 ))}
@@ -127,53 +133,52 @@ export default function Layout({ active, children }) {
             <Box
               sx={{
                 flexGrow: 1,
-                display: { xs: 'none', md: 'flex' },
-                justifyContent: 'space-around',
+                display: { xs: "none", md: "flex" },
+                justifyContent: "space-around",
               }}
             >
               <Button
-                variant={active === 'services' ? 'text' : 'text'}
+                variant={active === "services" ? "text" : "text"}
                 sx={{
-                  color: 'white',
-                  borderBottom: active === 'services' ? '0.4rem solid' : '',
+                  color: "white",
+                  borderBottom: active === "services" ? "0.4rem solid" : "",
                 }}
-                onClick={handleRouteChange('services')}
+                onClick={handleRouteChange("services")}
               >
                 Services
               </Button>
 
               <Button
-                variant={active === 'work' ? 'text' : 'text'}
+                variant={active === "work" ? "text" : "text"}
                 sx={{
-                  color: 'white',
-                  borderBottom: active === 'work' ? '0.4rem solid' : '',
+                  color: "white",
+                  borderBottom: active === "work" ? "0.4rem solid" : "",
                 }}
-                onClick={handleRouteChange('work')}
+                onClick={handleRouteChange("work")}
               >
                 Our Work
               </Button>
 
               <Button
-                variant={active === 'about' ? 'text' : 'text'}
+                variant={active === "about" ? "text" : "text"}
                 sx={{
-                  color: 'white',
-                  borderBottom: active === 'about' ? '0.4rem solid' : '',
+                  color: "white",
+                  borderBottom: active === "about" ? "0.4rem solid" : "",
                 }}
-                onClick={handleRouteChange('about')}
+                onClick={handleRouteChange("about")}
               >
                 About Us
               </Button>
 
-
               <Button
-                variant={active === 'contact' ? 'outlined' : 'contained'}
+                variant={active === "contact" ? "outlined" : "contained"}
                 sx={(theme) => ({
                   color:
-                    active === 'contact'
+                    active === "contact"
                       ? theme.palette.common.darkWhite
                       : theme.palette.common.slateDarkGray,
                 })}
-                onClick={handleRouteChange('contact')}
+                onClick={handleRouteChange("contact")}
               >
                 Contact
               </Button>
@@ -185,75 +190,67 @@ export default function Layout({ active, children }) {
       {children}
 
       <footer>
-        <Box sx={{borderTop: 'thick double #323a42', padding: '3rem 1rem'}}>
-          <Grid container justifyContent={'space-between'} spacing={10}>
+        <Box
+          sx={{
+            borderTop: "thick double #323a42",
+            padding: "3rem 1rem",
+            marginTop: "5rem",
+          }}
+        >
+          <Grid container justifyContent={"space-between"} spacing={10}>
             <Grid item>
               <Typography
-              sx={(theme) => ({
-                mr: 2,
-                flexGrow: 1,
-                display: { xs: 'flex' },
-                fontSize: { xs: '1.5rem', md: '1.5rem' },
-                fontWeight: 300,
-                letterSpacing: '.3rem',
-                // color: '#fff',
-                textDecoration: 'none',
-              })}
-              >Moorthi Engineering Limited</Typography>
+                sx={(theme) => ({
+                  mr: 2,
+                  flexGrow: 1,
+                  display: { xs: "flex" },
+                  fontSize: { xs: "1.5rem", md: "1.5rem" },
+                  fontWeight: 300,
+                  letterSpacing: ".3rem",
+                  // color: '#fff',
+                  textDecoration: "none",
+                })}
+              >
+                Moorthi Engineering Limited
+              </Typography>
             </Grid>
 
             <Grid item>
-              <Grid container direction={'column'}>
+              <Grid container direction={"column"}>
                 <Grid item>
-                  <Typography>
-                    Hours
-                  </Typography>
+                  <Typography>Hours</Typography>
                 </Grid>
 
                 <Grid item>
-                  <Typography>
-                  Monday - Friday: 
-                  </Typography>
+                  <Typography>Monday - Friday:</Typography>
                 </Grid>
 
                 <Grid item>
-                  <Typography>
-                  7.00am - 4.00pm
-                  </Typography>
+                  <Typography>7.00am - 4.00pm</Typography>
                 </Grid>
               </Grid>
             </Grid>
 
             <Grid item>
-              <Grid container direction={'column'}>
+              <Grid container direction={"column"}>
                 <Grid item>
-                  <Typography>
-                    Contact
-                  </Typography>
+                  <Typography>Contact</Typography>
                 </Grid>
 
                 <Grid item>
-                  <Typography>
-                  Email: admin@moorthi.co.nz
-                  </Typography>
+                  <Typography>Email: admin@moorthi.co.nz</Typography>
                 </Grid>
 
                 <Grid item>
-                  <Typography>
-                  Telephone: 0900000
-                  </Typography>
+                  <Typography>Telephone: 0900000</Typography>
                 </Grid>
 
                 <Grid item>
-                  <Typography>
-                  Mobile: 0200000000
-                  </Typography>
+                  <Typography>Mobile: 0200000000</Typography>
                 </Grid>
               </Grid>
             </Grid>
-
           </Grid>
-
         </Box>
       </footer>
     </>
