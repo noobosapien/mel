@@ -142,7 +142,7 @@ export default function Home() {
           <Grid item>
             <Grid container justifyContent={"center"} spacing={10}>
               <Grid item>
-                <Grid container direction={"column"} spacing={8}>
+                <Grid container direction={"row"} spacing={8}>
                   <Grid item>
                     <Typography
                       textAlign="center"
@@ -157,7 +157,7 @@ export default function Home() {
                       textAlign="center"
                       sx={{ fontWeight: 400, fontSize: "1.5rem" }}
                     >
-                      Horticulture
+                      Construction
                     </Typography>
                   </Grid>
 
@@ -175,87 +175,7 @@ export default function Home() {
                       textAlign="center"
                       sx={{ fontWeight: 400, fontSize: "1.5rem" }}
                     >
-                      Aquaculture
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </Grid>
-
-              <Grid item>
-                <Grid container direction={"column"} spacing={8}>
-                  <Grid item>
-                    <Typography
-                      textAlign="center"
-                      sx={{ fontWeight: 400, fontSize: "1.5rem" }}
-                    >
-                      Aviation
-                    </Typography>
-                  </Grid>
-
-                  <Grid item>
-                    <Typography
-                      textAlign="center"
-                      sx={{ fontWeight: 400, fontSize: "1.5rem" }}
-                    >
-                      Medical
-                    </Typography>
-                  </Grid>
-
-                  <Grid item>
-                    <Typography
-                      textAlign="center"
-                      sx={{ fontWeight: 400, fontSize: "1.5rem" }}
-                    >
-                      Forestry
-                    </Typography>
-                  </Grid>
-
-                  <Grid item>
-                    <Typography
-                      textAlign="center"
-                      sx={{ fontWeight: 400, fontSize: "1.5rem" }}
-                    >
-                      Scientific Research{" "}
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </Grid>
-
-              <Grid item>
-                <Grid container direction={"column"} spacing={8}>
-                  <Grid item>
-                    <Typography
-                      textAlign="center"
-                      sx={{ fontWeight: 400, fontSize: "1.5rem" }}
-                    >
-                      Hospitality
-                    </Typography>
-                  </Grid>
-
-                  <Grid item>
-                    <Typography
-                      textAlign="center"
-                      sx={{ fontWeight: 400, fontSize: "1.5rem" }}
-                    >
-                      Food processing
-                    </Typography>
-                  </Grid>
-
-                  <Grid item>
-                    <Typography
-                      textAlign="center"
-                      sx={{ fontWeight: 400, fontSize: "1.5rem" }}
-                    >
-                      Farming
-                    </Typography>
-                  </Grid>
-
-                  <Grid item>
-                    <Typography
-                      textAlign="center"
-                      sx={{ fontWeight: 400, fontSize: "1.5rem" }}
-                    >
-                      Artistic
+                      Residential
                     </Typography>
                   </Grid>
                 </Grid>
