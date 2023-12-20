@@ -54,9 +54,9 @@ export default function Services() {
           spacing={10}
           sx={{ marginTop: "1rem" }}
         >
-          <Grid item alignSelf={"flex-start"} sx={{ marginLeft: "3rem" }}>
+          {/* <Grid item alignSelf={"flex-start"} sx={{ marginLeft: "3rem" }}>
             <Selection names={names} />
-          </Grid>
+          </Grid> */}
 
           <Grid item>
             <Typography variant="h1">Welding</Typography>

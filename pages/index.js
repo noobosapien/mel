@@ -10,6 +10,11 @@ import ph3 from "@/public/4.png";
 import ph4 from "@/public/5.png";
 import ph5 from "@/public/6.png";
 import ph6 from "@/public/7.png";
+import ph14 from "@/public/14.png";
+import ph13 from "@/public/13.png";
+import ph15 from "@/public/15.png";
+import ph16 from "@/public/16.png";
+import CircleCard from "@/components/common/CircleCard";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +28,7 @@ export default function Home() {
         container
         direction="row"
         sx={{ marginTop: "4rem" }}
-        justifyContent={"space-around"}
+        justifyContent={"center"}
         alignItems={"center"}
       >
         <Grid item sx={{ borderRadius: "0%", height: "80vh" }}>
@@ -135,48 +140,83 @@ export default function Home() {
               sx={{ fontSize: "2.5rem", fontWeight: 700 }}
               textAlign={"center"}
             >
-              We work with clients of a range of industries.
+              Industries we work on.
             </Typography>
           </Grid>
 
           <Grid item>
             <Grid container justifyContent={"center"} spacing={10}>
               <Grid item>
-                <Grid container direction={"row"} spacing={8}>
+                <Grid
+                  container
+                  direction={"row"}
+                  justifyContent={"center"}
+                  spacing={8}
+                >
                   <Grid item>
-                    <Typography
-                      textAlign="center"
-                      sx={{ fontWeight: 400, fontSize: "1.5rem" }}
-                    >
-                      Marine
-                    </Typography>
+                    <Grid container direction={"column"} spacing={4}>
+                      <Grid item>
+                        <CircleCard image={ph14.src} />
+                      </Grid>
+                      <Grid item>
+                        <Typography
+                          textAlign="center"
+                          sx={{ fontWeight: 400, fontSize: "1.5rem" }}
+                        >
+                          Marine
+                        </Typography>
+                      </Grid>
+                    </Grid>
                   </Grid>
 
                   <Grid item>
-                    <Typography
-                      textAlign="center"
-                      sx={{ fontWeight: 400, fontSize: "1.5rem" }}
-                    >
-                      Construction
-                    </Typography>
+                    <Grid container direction={"column"} spacing={4}>
+                      <Grid item>
+                        <CircleCard image={ph13.src} />
+                      </Grid>
+                      <Grid item>
+                        <Typography
+                          textAlign="center"
+                          sx={{ fontWeight: 400, fontSize: "1.5rem" }}
+                        >
+                          Construction
+                        </Typography>
+                      </Grid>
+                    </Grid>
                   </Grid>
 
                   <Grid item>
-                    <Typography
-                      textAlign="center"
-                      sx={{ fontWeight: 400, fontSize: "1.5rem" }}
-                    >
-                      Architectural
-                    </Typography>
+                    <Grid container direction={"column"} spacing={4}>
+                      <Grid item>
+                        <CircleCard image={ph15.src} />
+                      </Grid>
+
+                      <Grid item>
+                        <Typography
+                          textAlign="center"
+                          sx={{ fontWeight: 400, fontSize: "1.5rem" }}
+                        >
+                          Architectural
+                        </Typography>
+                      </Grid>
+                    </Grid>
                   </Grid>
 
                   <Grid item>
-                    <Typography
-                      textAlign="center"
-                      sx={{ fontWeight: 400, fontSize: "1.5rem" }}
-                    >
-                      Residential
-                    </Typography>
+                    <Grid container direction={"column"} spacing={4}>
+                      <Grid item>
+                        <CircleCard image={ph16.src} />
+                      </Grid>
+
+                      <Grid item>
+                        <Typography
+                          textAlign="center"
+                          sx={{ fontWeight: 400, fontSize: "1.5rem" }}
+                        >
+                          Residential
+                        </Typography>
+                      </Grid>
+                    </Grid>
                   </Grid>
                 </Grid>
               </Grid>
