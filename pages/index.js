@@ -1,26 +1,46 @@
 import { Inter } from "@next/font/google";
 import Layout from "@/components/Layout";
-import { Box, Card, CardMedia, Grid, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Button,
+  Card,
+  CardMedia,
+  Grid,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemText,
+  Paper,
+  Typography,
+} from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ph from "@/public/1.png";
 import ph1 from "@/public/2.png";
 import ph2 from "@/public/3.png";
-import ph3 from "@/public/4.png";
-import ph4 from "@/public/5.png";
-import ph5 from "@/public/6.png";
-import ph6 from "@/public/7.png";
 import ph14 from "@/public/14.png";
 import ph13 from "@/public/13.png";
 import ph15 from "@/public/15.png";
 import ph16 from "@/public/16.png";
 import CircleCard from "@/components/common/CircleCard";
+import Background from "@/components/Home/Background";
+import NewReleasesIcon from "@mui/icons-material/NewReleases";
+import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
+import Diversity3Icon from "@mui/icons-material/Diversity3";
+import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
+import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const theme = useTheme();
   const matchesMd = useMediaQuery(theme.breakpoints.down("md"));
+  const router = useRouter();
+
+  const handleRouteChange = (route) => (e) => {
+    router.push(`/${route}`);
+  };
 
   return (
     <Layout>
@@ -30,6 +50,7 @@ export default function Home() {
         sx={{ marginTop: "4rem" }}
         justifyContent={"center"}
         alignItems={"center"}
+        spacing={10}
       >
         <Grid item sx={{ borderRadius: "0%", height: "80vh" }}>
           <Grid container>
@@ -50,7 +71,7 @@ export default function Home() {
                   <CardMedia
                     component="img"
                     alt="work"
-                    height={matchesMd ? "200" : "340"}
+                    height={matchesMd ? "200" : "440"}
                     image={ph.src}
                     sx={{ borderRadius: "2rem" }}
                   />
@@ -62,7 +83,7 @@ export default function Home() {
                   <CardMedia
                     component="img"
                     alt="work"
-                    height={matchesMd ? "240" : "340"}
+                    height={matchesMd ? "240" : "440"}
                     image={ph2.src}
                     sx={{ borderRadius: "2rem" }}
                   />
@@ -78,7 +99,7 @@ export default function Home() {
                   <CardMedia
                     component="img"
                     alt="work"
-                    height={matchesMd ? "260" : "380"}
+                    height={matchesMd ? "260" : "480"}
                     image={ph1.src}
                     sx={{ borderRadius: "2rem" }}
                   />
@@ -226,91 +247,175 @@ export default function Home() {
 
         <Grid item xs={12} sx={{ marginBottom: "10rem" }} />
 
+        <Grid item>
+          <Background>
+            <Grid
+              container
+              justifyContent={"center"}
+              alignItems={"center"}
+              spacing={10}
+              sx={{ paddingBottom: "5rem" }}
+            >
+              <Grid item>
+                <Grid
+                  container
+                  direction={"column"}
+                  spacing={10}
+                  justifyContent={"center"}
+                >
+                  <Grid item>
+                    <Typography
+                      sx={{
+                        background: "none",
+                        textShadow: "#000 10px 0 10px",
+                        fontSize: "2rem",
+                        fontWeight: 600,
+                      }}
+                    >
+                      Success driven approach.
+                    </Typography>
+                  </Grid>
+
+                  <Grid item>
+                    <Typography
+                      sx={{
+                        background: "none",
+                        textShadow: "#000 10px 0 10px",
+                        fontWeight: 300,
+                      }}
+                    >
+                      At our welding company, success is not just a goal; <br />
+                      it's a constant pursuit, driving us to consistently
+                      deliver unparalleled <br />
+                      craftsmanship and exceed expectations in every weld.
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Grid>
+
+              <Grid item>
+                <Grid container direction={"column"}>
+                  <Grid item>
+                    <Paper sx={{ width: 320, maxWidth: "100%" }}>
+                      <Typography
+                        sx={{
+                          background: "none",
+                          textShadow: "#000 10px 0 10px",
+                          fontWeight: 600,
+                        }}
+                      >
+                        Our most important values:
+                      </Typography>
+                      <List
+                        sx={{
+                          width: "100%",
+                          maxWidth: 360,
+                          bgcolor: "background.paper",
+                        }}
+                      >
+                        <ListItem>
+                          <ListItemAvatar>
+                            <Avatar>
+                              <NewReleasesIcon />
+                            </Avatar>
+                          </ListItemAvatar>
+                          <ListItemText
+                            primaryTypographyProps={{
+                              sx: {
+                                background: "none",
+                                textShadow: "#000 10px 0 10px",
+                                fontWeight: 300,
+                              },
+                            }}
+                            primary="Innovation"
+                          />
+                        </ListItem>
+                        <ListItem>
+                          <ListItemAvatar>
+                            <Avatar>
+                              <HealthAndSafetyIcon />
+                            </Avatar>
+                          </ListItemAvatar>
+                          <ListItemText
+                            primaryTypographyProps={{
+                              sx: {
+                                background: "none",
+                                textShadow: "#000 10px 0 10px",
+                                fontWeight: 300,
+                              },
+                            }}
+                            primary="Safety"
+                          />
+                        </ListItem>
+                        <ListItem>
+                          <ListItemAvatar>
+                            <Avatar>
+                              <Diversity3Icon />
+                            </Avatar>
+                          </ListItemAvatar>
+                          <ListItemText
+                            primaryTypographyProps={{
+                              sx: {
+                                background: "none",
+                                textShadow: "#000 10px 0 10px",
+                                fontWeight: 300,
+                              },
+                            }}
+                            primary="Teamwork"
+                          />
+                        </ListItem>
+                        <ListItem>
+                          <ListItemAvatar>
+                            <Avatar>
+                              <ManageAccountsIcon />
+                            </Avatar>
+                          </ListItemAvatar>
+                          <ListItemText
+                            primaryTypographyProps={{
+                              sx: {
+                                background: "none",
+                                textShadow: "#000 10px 0 10px",
+                                fontWeight: 300,
+                              },
+                            }}
+                            primary="Project Management"
+                          />
+                        </ListItem>
+                      </List>
+                    </Paper>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Background>
+        </Grid>
+
         <Grid
-          item
           container
+          item
           direction={"column"}
-          justifyContent={"center"}
           alignItems={"center"}
+          spacing={10}
+          sx={{ marginTop: "5rem" }}
         >
           <Grid item>
             <Typography
               variant="h3"
-              sx={{ fontSize: "2.5rem", fontWeight: 700 }}
+              sx={{ fontSize: "2.5rem", fontWeight: 100 }}
+              textAlign={"center"}
             >
-              Featured Work
+              Delivering customised solutions for every client, contact us for
+              more information.
             </Typography>
           </Grid>
-
-          <Grid item sx={{ marginBottom: "10rem" }} />
-
-          <Grid item container justifyContent={"center"} spacing={10}>
-            <Grid item>
-              <Grid container direction={"column"} spacing={10}>
-                <Grid item>
-                  {/* Placeholder */}
-                  <Card>
-                    <CardMedia
-                      component="img"
-                      alt="work"
-                      height={matchesMd ? "320" : "440"}
-                      image={ph3.src}
-                      sx={{ borderRadius: "1rem" }}
-                    />
-                  </Card>
-                </Grid>
-
-                <Grid item>
-                  {/* Placeholder */}
-                  <Card>
-                    <CardMedia
-                      component="img"
-                      alt="work"
-                      height={matchesMd ? "320" : "440"}
-                      image={ph4.src}
-                      sx={{ borderRadius: "1rem" }}
-                    />
-                  </Card>
-                </Grid>
-              </Grid>
-            </Grid>
-
-            <Grid item>
-              <Grid container direction={"column"} spacing={10}>
-                <Grid item>
-                  {/* Placeholder */}
-
-                  <Card>
-                    <CardMedia
-                      component="img"
-                      alt="work"
-                      height={matchesMd ? "320" : "440"}
-                      image={ph5.src}
-                      sx={{ borderRadius: "1rem" }}
-                    />
-                  </Card>
-                </Grid>
-
-                <Grid item>
-                  {/* Placeholder */}
-                  <Card>
-                    <CardMedia
-                      component="img"
-                      alt="work"
-                      height={matchesMd ? "320" : "440"}
-                      image={ph6.src}
-                      sx={{ borderRadius: "1rem" }}
-                    />
-                  </Card>
-                </Grid>
-              </Grid>
-            </Grid>
+          <Grid item>
+            <Button variant="contained" onClick={handleRouteChange("contact")}>
+              Contact us
+            </Button>
           </Grid>
         </Grid>
 
         <Grid item xs={12} sx={{ marginBottom: "10rem" }} />
-
-        <Grid item></Grid>
       </Grid>
     </Layout>
   );

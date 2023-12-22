@@ -18,6 +18,7 @@ import Head from "next/head";
 import React from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const pages = [
   { name: "Services", url: "/services" },
@@ -65,7 +66,7 @@ export default function Layout({ active, children }) {
             {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
             <Typography
               variant="h1"
-              component="a"
+              component={Link}
               href="/"
               sx={(theme) => ({
                 mr: 2,
@@ -121,7 +122,7 @@ export default function Layout({ active, children }) {
               >
                 {pages.map((page) => (
                   <MenuItem
-                    key={page.name}
+                    key={`${page.name}-page`}
                     onClick={handleRouteChange(page.url)}
                   >
                     <Typography textAlign="center">{page.name}</Typography>
@@ -197,58 +198,34 @@ export default function Layout({ active, children }) {
             marginTop: "5rem",
           }}
         >
-          <Grid container justifyContent={"space-between"} spacing={10}>
+          <Grid
+            container
+            justifyContent={"center"}
+            alignItems={"center"}
+            direction={"column"}
+            spacing={10}
+          >
             <Grid item>
               <Typography
                 sx={(theme) => ({
                   mr: 2,
                   flexGrow: 1,
                   display: { xs: "flex" },
-                  fontSize: { xs: "1.5rem", md: "1.5rem" },
+                  fontSize: { xs: "1.0rem", md: "1.5rem" },
                   fontWeight: 300,
                   letterSpacing: ".3rem",
                   // color: '#fff',
                   textDecoration: "none",
                 })}
               >
-                Moorthi Engineering Limited
+                Moorthi Engineering Limited &#169;
               </Typography>
             </Grid>
 
             <Grid item>
-              <Grid container direction={"column"}>
-                <Grid item>
-                  <Typography>Hours</Typography>
-                </Grid>
-
-                <Grid item>
-                  <Typography>Monday - Friday:</Typography>
-                </Grid>
-
-                <Grid item>
-                  <Typography>7.00am - 4.00pm</Typography>
-                </Grid>
-              </Grid>
-            </Grid>
-
-            <Grid item>
-              <Grid container direction={"column"}>
-                <Grid item>
-                  <Typography>Contact</Typography>
-                </Grid>
-
-                <Grid item>
-                  <Typography>Email: admin@moorthi.co.nz</Typography>
-                </Grid>
-
-                <Grid item>
-                  <Typography>Telephone: 0900000</Typography>
-                </Grid>
-
-                <Grid item>
-                  <Typography>Mobile: 0200000000</Typography>
-                </Grid>
-              </Grid>
+              <Typography sx={{ fontWeight: 100 }}>
+                Site by: ArtisanCey
+              </Typography>
             </Grid>
           </Grid>
         </Box>
