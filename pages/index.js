@@ -285,7 +285,7 @@ export default function Home() {
                       }}
                     >
                       At our welding company, success is not just a goal; <br />
-                      it's a constant pursuit, driving us to consistently
+                      it&lsquo;s a constant pursuit, driving us to consistently
                       deliver unparalleled <br />
                       craftsmanship and exceed expectations in every weld.
                     </Typography>

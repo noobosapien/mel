@@ -72,7 +72,7 @@ export default function Layout({ active, children }) {
                 mr: 2,
                 flexGrow: 1,
                 display: { xs: "flex" },
-                fontSize: { xs: "1.5rem", md: "1.5rem" },
+                fontSize: { xs: "1.5rem", md: "1.5rem", lg: "2rem" },
                 fontWeight: 300,
                 letterSpacing: ".3rem",
                 // color: '#fff',
