@@ -11,7 +11,7 @@ const Animate = styled("div")(({ theme }) => ({
   background: "#292f3645",
   // left: 'calc(50%-75vw)',
   borderRadius: "45%",
-  animation: "rotate 10s infinite",
+  // animation: "rotate 10s infinite",
 
   "&::before": {
     content: '""',
@@ -22,7 +22,8 @@ const Animate = styled("div")(({ theme }) => ({
     top: 0,
     left: 0,
     borderRadius: "40%",
-    animation: "rotate 20s infinite",
+    transform: "rotate(90)",
+    // animation: "rotate 20s infinite",
   },
 
   "@keyframes rotate": {
@@ -45,8 +46,8 @@ export default function Animation({ children }) {
       style={{
         position: "relative",
         // width: "100%",
-        width: matchesMd ? "225px" : "600px",
-        height: matchesMd ? "225px" : "600px",
+        width: matchesMd ? "325px" : "600px",
+        height: matchesMd ? "325px" : "600px",
         // maxWidth: 155,
       }}
     >

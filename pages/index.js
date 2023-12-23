@@ -75,32 +75,58 @@ export default function Home() {
 
         {/* <Grid item xs={12} sx={{ marginBottom: "10rem" }} /> */}
 
-        <Grid item>
-          <Animation>
-            <Card
-              elevation={10}
-              sx={{
-                position: "absolute",
+        <Grid
+          item
+          container
+          justifyContent={"space-evenly"}
+          alignItems={"center"}
+          spacing={10}
+        >
+          <Grid item>
+            <Animation>
+              <Card
+                elevation={10}
+                sx={{
+                  position: "absolute",
 
-                width: matchesMd ? "220px" : "590px",
-                height: matchesMd ? "220px" : "590px",
-                left: "50%",
-                top: "50%",
-                zIndex: 1,
-                transform: "translate(-50%, -50%)",
-                borderRadius: "4rem",
-              }}
-            >
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  // height="140"
-                  image={ph18.src}
-                  alt="green iguana"
-                />
-              </CardActionArea>
-            </Card>
-          </Animation>
+                  width: matchesMd ? "300px" : "520px",
+                  height: matchesMd ? "300px" : "520px",
+                  left: "50%",
+                  top: "50%",
+                  zIndex: 1,
+                  transform: "translate(-50%, -50%)",
+                  borderRadius: "4rem",
+                }}
+              >
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    // height="140"
+                    image={ph18.src}
+                    alt="green iguana"
+                  />
+                </CardActionArea>
+              </Card>
+            </Animation>
+          </Grid>
+
+          <Grid item md={5} sm={8} xs={10}>
+            <Typography sx={{ fontWeight: 600 }}>
+              Moorthi Engineering Limited, savants of innovative craftsmanship.
+            </Typography>
+            <br />
+            <Typography>
+              Founded in 2017, Moorthi Engineering Limited has swiftly emerged
+              as a trailblazing force in the welding industry, setting new
+              standards of excellence and innovation.
+              <br /> With a commitment to precision and a passion for quality
+              craftsmanship, Moorthi Engineering Limited has become synonymous
+              with reliable and cutting-edge welding solutions. From its
+              inception, the company has dedicated itself to providing top-notch
+              services that cater to the diverse needs of clients across various
+              industries.
+            </Typography>
+          </Grid>
         </Grid>
 
         <Grid item sx={{ marginBottom: "4rem" }} xs={12} />

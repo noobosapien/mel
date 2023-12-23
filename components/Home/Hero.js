@@ -25,7 +25,7 @@ export default function Hero() {
             container
             justifyContent={"center"}
             alignItems={"center"}
-            spacing={4}
+            spacing={2}
           >
             <Grid item>
               <Typography
