@@ -58,7 +58,8 @@ export default function Layout({ active, children }) {
         elevation={0}
         color="transparent"
         sx={(theme) => ({
-          background: theme.palette.common.slateDarkGray,
+          // background: theme.palette.common.slateDarkGray,
+          marginBottom: "5rem",
         })}
       >
         <Container maxWidth="xl">
@@ -140,10 +141,10 @@ export default function Layout({ active, children }) {
             >
               <Button
                 variant={active === "services" ? "text" : "text"}
-                sx={{
-                  color: "white",
+                sx={(theme) => ({
+                  color: "#292f36",
                   borderBottom: active === "services" ? "0.4rem solid" : "",
-                }}
+                })}
                 onClick={handleRouteChange("services")}
               >
                 Services
@@ -152,7 +153,7 @@ export default function Layout({ active, children }) {
               <Button
                 variant={active === "work" ? "text" : "text"}
                 sx={{
-                  color: "white",
+                  color: "#292f36",
                   borderBottom: active === "work" ? "0.4rem solid" : "",
                 }}
                 onClick={handleRouteChange("work")}
@@ -163,7 +164,7 @@ export default function Layout({ active, children }) {
               <Button
                 variant={active === "about" ? "text" : "text"}
                 sx={{
-                  color: "white",
+                  color: "#292f36",
                   borderBottom: active === "about" ? "0.4rem solid" : "",
                 }}
                 onClick={handleRouteChange("about")}

@@ -30,6 +30,7 @@ import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import Diversity3Icon from "@mui/icons-material/Diversity3";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import { useRouter } from "next/router";
+import Hero from "@/components/Home/Hero";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,6 +45,7 @@ export default function Home() {
 
   return (
     <Layout>
+      <Hero />
       <Grid
         container
         direction="row"
@@ -52,62 +54,17 @@ export default function Home() {
         alignItems={"center"}
         spacing={10}
       >
-        <Grid item sx={{ borderRadius: "0%", height: "80vh" }}>
-          <Grid container>
-            <Grid item>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: matchesMd ? "100vw" : "50vw",
-                }}
-              >
-                <Card
-                  sx={{
-                    position: "absolute",
-                    top: matchesMd ? "1rem" : "0rem",
-                    left: matchesMd ? "1rem" : "0rem",
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    alt="work"
-                    height={matchesMd ? "200" : "440"}
-                    image={ph.src}
-                    sx={{ borderRadius: "2rem" }}
-                  />
-                </Card>
-
-                <Card
-                  sx={{ position: "absolute", top: "18rem", left: "16rem" }}
-                >
-                  <CardMedia
-                    component="img"
-                    alt="work"
-                    height={matchesMd ? "240" : "440"}
-                    image={ph2.src}
-                    sx={{ borderRadius: "2rem" }}
-                  />
-                </Card>
-
-                <Card
-                  sx={{
-                    position: "absolute",
-                    top: matchesMd ? "10rem" : "20rem",
-                    left: matchesMd ? "5rem" : "-5rem",
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    alt="work"
-                    height={matchesMd ? "260" : "480"}
-                    image={ph1.src}
-                    sx={{ borderRadius: "2rem" }}
-                  />
-                </Card>
-              </Box>
-            </Grid>
-          </Grid>
-        </Grid>
+        {/* <Grid
+          item
+          sx={{
+            width: "100vw",
+            borderRadius: "0%",
+            height: "80vh",
+            position: "relative",
+          }}
+        >
+          
+        </Grid> */}
 
         <Grid item>
           <Grid
@@ -117,24 +74,6 @@ export default function Home() {
             direction={"column"}
             spacing={10}
           >
-            <Grid item>
-              <Typography variant="h3" textAlign={"center"}>
-                Auckland based
-              </Typography>
-            </Grid>
-
-            <Grid item>
-              <Typography
-                variant="h4"
-                textAlign={"center"}
-                sx={{ fontWeight: "100", fontSize: "2rem" }}
-              >
-                Welders/Fabricators <br /> Specializing in Arc welding, MIG
-                Welding, <br />
-                Fabricating and Rigging.
-              </Typography>
-            </Grid>
-
             <Grid item>
               <Typography
                 variant="h4"
@@ -267,6 +206,7 @@ export default function Home() {
                     <Typography
                       sx={{
                         background: "none",
+                        color: "#fff",
                         textShadow: "#000 10px 0 10px",
                         fontSize: "2rem",
                         fontWeight: 600,
@@ -280,6 +220,7 @@ export default function Home() {
                     <Typography
                       sx={{
                         background: "none",
+                        color: "#fff",
                         textShadow: "#000 10px 0 10px",
                         fontWeight: 300,
                       }}
@@ -296,11 +237,20 @@ export default function Home() {
               <Grid item>
                 <Grid container direction={"column"}>
                   <Grid item>
-                    <Paper sx={{ width: 320, maxWidth: "100%" }}>
+                    <Paper
+                      sx={{
+                        width: 320,
+                        maxWidth: "100%",
+                        background: "#292f36",
+                        padding: "1rem",
+                        borderRadius: "1rem",
+                      }}
+                    >
                       <Typography
                         sx={{
                           background: "none",
                           textShadow: "#000 10px 0 10px",
+                          color: "#fff",
                           fontWeight: 600,
                         }}
                       >
@@ -310,7 +260,6 @@ export default function Home() {
                         sx={{
                           width: "100%",
                           maxWidth: 360,
-                          bgcolor: "background.paper",
                         }}
                       >
                         <ListItem>
@@ -324,6 +273,7 @@ export default function Home() {
                               sx: {
                                 background: "none",
                                 textShadow: "#000 10px 0 10px",
+                                color: "#fff",
                                 fontWeight: 300,
                               },
                             }}
@@ -341,6 +291,7 @@ export default function Home() {
                               sx: {
                                 background: "none",
                                 textShadow: "#000 10px 0 10px",
+                                color: "#fff",
                                 fontWeight: 300,
                               },
                             }}
@@ -358,6 +309,7 @@ export default function Home() {
                               sx: {
                                 background: "none",
                                 textShadow: "#000 10px 0 10px",
+                                color: "#fff",
                                 fontWeight: 300,
                               },
                             }}
@@ -375,6 +327,7 @@ export default function Home() {
                               sx: {
                                 background: "none",
                                 textShadow: "#000 10px 0 10px",
+                                color: "#fff",
                                 fontWeight: 300,
                               },
                             }}
