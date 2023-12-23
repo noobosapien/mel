@@ -35,11 +35,11 @@ export default function MyApp(props) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <AnimatePresence mode="wait">
-          <motion.div key={router.pathname}>
-            <Component {...pageProps} />
+        {/* <AnimatePresence mode="wait"> */}
+        {/* <motion.div key={router.pathname}> */}
+        <Component {...pageProps} />
 
-            <motion.div
+        {/* <motion.div
               className="slide-in"
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 0 }}
@@ -55,7 +55,7 @@ export default function MyApp(props) {
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             ></motion.div>
           </motion.div>
-        </AnimatePresence>
+        </AnimatePresence> */}
       </ThemeProvider>
     </CacheProvider>
   );

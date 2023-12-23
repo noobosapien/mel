@@ -5,6 +5,7 @@ import {
   Box,
   Button,
   Card,
+  CardActionArea,
   CardMedia,
   Grid,
   List,
@@ -16,9 +17,7 @@ import {
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import ph from "@/public/1.png";
-import ph1 from "@/public/2.png";
-import ph2 from "@/public/3.png";
+import ph18 from "@/public/18.png";
 import ph14 from "@/public/14.png";
 import ph13 from "@/public/13.png";
 import ph15 from "@/public/15.png";
@@ -31,6 +30,7 @@ import Diversity3Icon from "@mui/icons-material/Diversity3";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import { useRouter } from "next/router";
 import Hero from "@/components/Home/Hero";
+import Animation from "@/components/Home/Animation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,26 +46,15 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
+
       <Grid
         container
         direction="row"
         sx={{ marginTop: "4rem" }}
         justifyContent={"center"}
         alignItems={"center"}
-        spacing={10}
+        spacing={4}
       >
-        {/* <Grid
-          item
-          sx={{
-            width: "100vw",
-            borderRadius: "0%",
-            height: "80vh",
-            position: "relative",
-          }}
-        >
-          
-        </Grid> */}
-
         <Grid item>
           <Grid
             container
@@ -84,7 +73,37 @@ export default function Home() {
           </Grid>
         </Grid>
 
-        <Grid item xs={12} sx={{ marginBottom: "10rem" }} />
+        {/* <Grid item xs={12} sx={{ marginBottom: "10rem" }} /> */}
+
+        <Grid item>
+          <Animation>
+            <Card
+              elevation={10}
+              sx={{
+                position: "absolute",
+
+                width: matchesMd ? "220px" : "590px",
+                height: matchesMd ? "220px" : "590px",
+                left: "50%",
+                top: "50%",
+                zIndex: 1,
+                transform: "translate(-50%, -50%)",
+                borderRadius: "4rem",
+              }}
+            >
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  // height="140"
+                  image={ph18.src}
+                  alt="green iguana"
+                />
+              </CardActionArea>
+            </Card>
+          </Animation>
+        </Grid>
+
+        <Grid item sx={{ marginBottom: "4rem" }} xs={12} />
 
         <Grid
           item

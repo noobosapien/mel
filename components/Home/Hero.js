@@ -2,6 +2,7 @@ import { Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Animation from "./Animation";
 
 export default function Hero() {
   const theme = useTheme();
