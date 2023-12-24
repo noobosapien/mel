@@ -17,7 +17,7 @@ import {
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import ph18 from "@/public/18.png";
+import ph18 from "@/public/20.png";
 import ph14 from "@/public/14.png";
 import ph13 from "@/public/13.png";
 import ph15 from "@/public/15.png";

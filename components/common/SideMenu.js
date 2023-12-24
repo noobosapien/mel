@@ -65,7 +65,6 @@ export default function SideMenu() {
   return (
     <div>
       <React.Fragment>
-        {/* <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button> */}
         <IconButton
           size="large"
           aria-label="account of current user"
@@ -73,7 +72,6 @@ export default function SideMenu() {
           aria-haspopup="true"
           onClick={toggleDrawer(true)}
           color="inherit"
-          // sx={{ color: "#d6d6d6" }}
         >
           <MenuIcon />
         </IconButton>
