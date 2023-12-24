@@ -3,10 +3,17 @@ import React from "react";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Animation from "./Animation";
+import { useRouter } from "next/router";
 
 export default function Hero() {
   const theme = useTheme();
   const matchesMd = useMediaQuery(theme.breakpoints.down("md"));
+
+  const router = useRouter();
+
+  const handleRouteChange = (route) => (e) => {
+    router.push(`/${route}`);
+  };
 
   return (
     <>
@@ -68,11 +75,15 @@ export default function Hero() {
             <Grid item xs={12} />
 
             <Grid item>
-              <Button variant="contained">About us</Button>
+              <Button variant="contained" onClick={handleRouteChange("about")}>
+                About us
+              </Button>
             </Grid>
 
             <Grid item>
-              <Button variant="outlined">Contact us</Button>
+              <Button variant="outlined" onClick={handleRouteChange("contact")}>
+                Contact us
+              </Button>
             </Grid>
           </Grid>
         </div>

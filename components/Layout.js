@@ -19,6 +19,7 @@ import React from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import SideMenu from "./common/SideMenu";
 
 const pages = [
   { name: "Services", url: "/services" },
@@ -92,14 +93,15 @@ export default function Layout({ active, children }) {
             />
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-              <IconButton
+              <SideMenu />
+              {/* <IconButton
                 size="large"
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
                 onClick={handleOpenNavMenu}
                 color="inherit"
-                sx={{ color: "#d6d6d6" }}
+                // sx={{ color: "#d6d6d6" }}
               >
                 <MenuIcon />
               </IconButton>
@@ -129,7 +131,7 @@ export default function Layout({ active, children }) {
                     <Typography textAlign="center">{page.name}</Typography>
                   </MenuItem>
                 ))}
-              </Menu>
+              </Menu> */}
             </Box>
 
             <Box
