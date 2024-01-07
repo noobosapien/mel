@@ -68,7 +68,7 @@ export default function Hero() {
               >
                 Welders/Fabricators <br /> Specializing in Arc welding, MIG
                 Welding, <br />
-                Fabricating and Rigging.
+                Fabricating/Fitting and Rigging.
               </Typography>
             </Grid>
 
