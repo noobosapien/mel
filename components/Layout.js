@@ -16,10 +16,12 @@ import {
 } from "@mui/material";
 import Head from "next/head";
 import React from "react";
-import MenuIcon from "@mui/icons-material/Menu";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import SideMenu from "./common/SideMenu";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Logo from "@/public/logo.png";
 
 const pages = [
   { name: "Services", url: "/services" },
@@ -30,6 +32,9 @@ const pages = [
 
 export default function Layout({ active, children }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const theme = useTheme();
+  const matchesMD = useMediaQuery(theme.breakpoints.up("md"));
 
   const router = useRouter();
 
@@ -66,7 +71,7 @@ export default function Layout({ active, children }) {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-            <Typography
+            {/* <Typography
               variant="h1"
               component={Link}
               href="/"
@@ -82,7 +87,14 @@ export default function Layout({ active, children }) {
               })}
             >
               Moorthi Engineering Limited
-            </Typography>
+            </Typography> */}
+
+            <Link href={"/"} style={{ marginTop: "1rem" }}>
+              <img
+                src={Logo.src}
+                style={{ width: matchesMD ? "10rem" : "5rem" }}
+              />
+            </Link>
 
             <Box
               sx={(theme) => ({
@@ -177,14 +189,18 @@ export default function Layout({ active, children }) {
               <Button
                 variant={active === "contact" ? "outlined" : "contained"}
                 sx={(theme) => ({
-                  color:
+                  backgroundColor:
                     active === "contact"
                       ? theme.palette.common.darkWhite
-                      : theme.palette.common.slateDarkGray,
+                      : theme.palette.common.slateGray,
                 })}
                 onClick={handleRouteChange("contact")}
               >
-                Contact
+                <span
+                  style={{ color: active === "contact" ? "#2A4747" : "#fff" }}
+                >
+                  Contact
+                </span>
               </Button>
             </Box>
           </Toolbar>
@@ -196,7 +212,7 @@ export default function Layout({ active, children }) {
       <footer>
         <Box
           sx={{
-            borderTop: "thick double #323a42",
+            borderTop: "solid #323a42",
             padding: "3rem 1rem",
             marginTop: "5rem",
           }}
@@ -227,7 +243,7 @@ export default function Layout({ active, children }) {
 
             <Grid item>
               <Typography sx={{ fontWeight: 100 }}>
-                Site by: ArtisanCey
+                Site by: Warkawik
               </Typography>
             </Grid>
           </Grid>

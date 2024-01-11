@@ -103,7 +103,6 @@ export default function Home() {
                     component="img"
                     // height="140"
                     image={ph18.src}
-                    alt="green iguana"
                   />
                 </CardActionArea>
               </Card>
