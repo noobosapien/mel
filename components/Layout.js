@@ -243,7 +243,7 @@ export default function Layout({ active, children }) {
 
             <Grid item>
               <Typography sx={{ fontWeight: 100 }}>
-                Site by: Warkawik
+                Site by: ArtisanCey
               </Typography>
             </Grid>
           </Grid>
