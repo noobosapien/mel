@@ -46,11 +46,9 @@ export default function Home() {
 
   return (
     <Layout
-      title={
-        "Moorthi Engineering Limited for Welding, Fabricating, Fitting, and Rigging, based in Auckland."
-      }
+      title={"Moorthi Engineering Limited based in Auckland."}
       description={`
-      Moorthi Engineering Limited, savants of innovative craftsmanship. Working in the Auckland / New Zealand region since 2017. 
+      Moorthi Engineering Limited, savants of innovative craftsmanship. Working in the Auckland region. 
       We excel in Welding, Fabricating, Fitting, and Rigging.
       `}
     >
