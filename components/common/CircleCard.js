@@ -3,6 +3,7 @@ import React from "react";
 
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Image from "next/image";
 
 export default function CircleCard({ image }) {
   const theme = useTheme();
@@ -12,12 +13,21 @@ export default function CircleCard({ image }) {
     <>
       <Fade in timeout={1000}>
         <Card sx={{ borderWidth: "0" }} variant="outlined">
-          <CardMedia
+          {/* <CardMedia
             component="img"
             alt="work"
             height={matchesMd ? "240" : "240"}
             image={image}
             sx={{ borderRadius: "100%", borderWidth: "0" }}
+          /> */}
+          <Image
+            src={image}
+            width={matchesMd ? 240 : 240}
+            height={matchesMd ? 240 : 240}
+            style={{
+              borderRadius: "100%",
+              borderWidth: "0",
+            }}
           />
         </Card>
       </Fade>

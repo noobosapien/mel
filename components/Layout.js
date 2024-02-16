@@ -22,6 +22,7 @@ import SideMenu from "./common/SideMenu";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Logo from "@/public/logo.png";
+import Image from "next/image";
 
 const pages = [
   { name: "Services", url: "/services" },
@@ -91,9 +92,10 @@ export default function Layout({ active, title, description, children }) {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Link href={"/"} style={{ marginTop: "1rem" }}>
-              <img
+              <Image
                 src={Logo.src}
-                style={{ width: matchesMD ? "10rem" : "5rem" }}
+                width={matchesMD ? "100" : "100"}
+                height={matchesMD ? "100" : "100"}
               />
             </Link>
 

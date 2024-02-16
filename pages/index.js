@@ -31,6 +31,7 @@ import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import { useRouter } from "next/router";
 import Hero from "@/components/Home/Hero";
 import Animation from "@/components/Home/Animation";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -107,10 +108,10 @@ export default function Home() {
                 }}
               >
                 <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    // height="140"
-                    image={ph18.src}
+                  <Image
+                    src={ph18}
+                    width={matchesMd ? 300 : 520}
+                    height={matchesMd ? 300 : 520}
                   />
                 </CardActionArea>
               </Card>
