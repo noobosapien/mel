@@ -23,6 +23,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Logo from "@/public/logo.png";
 import Image from "next/image";
+import Script from "next/script";
 
 const pages = [
   { name: "Services", url: "/services" },
@@ -73,7 +74,7 @@ export default function Layout({ active, title, description, children }) {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script
+        <Script
           type="application/ld+json"
           dangerouslySetInnerHTML={addJsonLd()}
           key="product-jsonld"
