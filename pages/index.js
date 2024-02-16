@@ -80,8 +80,6 @@ export default function Home() {
           </Grid>
         </Grid>
 
-        {/* <Grid item xs={12} sx={{ marginBottom: "10rem" }} /> */}
-
         <Grid
           item
           container
@@ -119,8 +117,12 @@ export default function Home() {
           </Grid>
 
           <Grid item md={5} sm={8} xs={10}>
-            <Typography variant="h1" sx={{ fontWeight: 600 }}>
-              Moorthi Engineering Limited, savants of innovative craftsmanship.
+            <Typography
+              variant="h1"
+              sx={{ fontWeight: 600, fontSize: "1.5rem" }}
+            >
+              Moorthi Engineering Limited. <br />
+              Excelling in Welding, Fabricating, Fitting, and Rigging.
             </Typography>
             <br />
             <Typography>
