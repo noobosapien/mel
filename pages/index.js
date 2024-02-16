@@ -44,7 +44,15 @@ export default function Home() {
   };
 
   return (
-    <Layout>
+    <Layout
+      title={
+        "Moorthi Engineering Limited for Welding, Fabricating, Fitting, and Rigging, based in Auckland."
+      }
+      description={`
+      Moorthi Engineering Limited, savants of innovative craftsmanship. Working in the Auckland / New Zealand region since 2017. 
+      We excel in Welding, Fabricating, Fitting, and Rigging.
+      `}
+    >
       <Hero />
 
       <Grid
@@ -110,7 +118,7 @@ export default function Home() {
           </Grid>
 
           <Grid item md={5} sm={8} xs={10}>
-            <Typography sx={{ fontWeight: 600 }}>
+            <Typography variant="h1" sx={{ fontWeight: 600 }}>
               Moorthi Engineering Limited, savants of innovative craftsmanship.
             </Typography>
             <br />
@@ -140,7 +148,7 @@ export default function Home() {
         >
           <Grid item>
             <Typography
-              variant="h3"
+              variant="h2"
               sx={{ fontSize: "2.5rem", fontWeight: 700 }}
               textAlign={"center"}
             >
@@ -248,6 +256,7 @@ export default function Home() {
                 >
                   <Grid item>
                     <Typography
+                      variant="h2"
                       sx={{
                         background: "none",
                         color: "#fff",
@@ -291,7 +300,9 @@ export default function Home() {
                       }}
                     >
                       <Typography
+                        variant="h2"
                         sx={{
+                          fontSize: "1.5rem",
                           background: "none",
                           textShadow: "#000 10px 0 10px",
                           color: "#fff",

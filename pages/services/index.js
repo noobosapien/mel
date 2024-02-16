@@ -46,7 +46,14 @@ export default function Services() {
 
   return (
     <>
-      <Layout active="services">
+      <Layout
+        active="services"
+        title="Services we offer where we excel in quality craftmanships across the welding industry in Auckland."
+        description={`With few of the best Welders in the Auckland region, Moorthi
+        brings his expertise over many years of welding with the ability
+        to weld using Arc welders and MIG welders to deliver the finest
+        quality possible.`}
+      >
         <Grid
           container
           direction={"column"}

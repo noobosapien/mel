@@ -16,7 +16,11 @@ const images = [p1, p2, p3, p4, p5, p6, p7, p8];
 export default function Work() {
   return (
     <>
-      <Layout active="work">
+      <Layout
+        active="work"
+        title="Work we have done throughout the welding industry in Auckland."
+        description={`Some photos of work done by our business.`}
+      >
         <Grid
           container
           justifyContent={"center"}

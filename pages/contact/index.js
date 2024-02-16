@@ -10,7 +10,11 @@ export default function Contact() {
 
   return (
     <>
-      <Layout active="contact">
+      <Layout
+        active="contact"
+        title="Contact details of Moorthi Engineering Limited where we excel in quality craftmanships across the welding industry in Auckland."
+        description={"Contact details and hours of work of our business."}
+      >
         <Grid
           container
           justifyContent={"center"}
@@ -58,7 +62,7 @@ export default function Contact() {
               width={matchesMd ? "340" : "600"}
               height={matchesMd ? "450" : "600"}
               style={{ border: 0, borderRadius: "3rem" }}
-              allowfullscreen=""
+              allowFullScreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>

@@ -10,7 +10,13 @@ export default function About() {
 
   return (
     <>
-      <Layout active="about">
+      <Layout
+        active="about"
+        title="About Moorthi Engineering Limited where we excel in quality craftmanships across the welding industry in Auckland."
+        description={
+          "Our welding company prides itself on delivering exceptional results and consistently exceeding expectations, ensuring that we not only meet but surpass our promises to our valued clients."
+        }
+      >
         <Grid
           container
           justifyContent={"center"}

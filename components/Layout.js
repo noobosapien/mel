@@ -30,7 +30,7 @@ const pages = [
   { name: "Contact", url: "/contact" },
 ];
 
-export default function Layout({ active, children }) {
+export default function Layout({ active, title, description, children }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const theme = useTheme();
@@ -50,13 +50,33 @@ export default function Layout({ active, children }) {
     setAnchorElNav(null);
   };
 
+  function addJsonLd() {
+    return {
+      __html: `
+      {
+        "@context": "https://schema.org/",
+        "@type": "Service",
+        "name": "Moorthi Engineering Limited Auckland",
+        "image": [
+          "https://moorthi.co.nz/2.png"
+         ],
+        "description": "Moorthi Engineering Limited savants at innovative craftsmanship, services include Welding, Fabricating, Fitting, and Rigging."
+      }
+  `,
+    };
+  }
+
   return (
     <>
       <Head>
-        <title>Moorthi Engineering Limited</title>
-        <meta name="description" content="Moorthi Engineering Limited" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addJsonLd()}
+          key="product-jsonld"
+        />
       </Head>
 
       <AppBar
@@ -70,25 +90,6 @@ export default function Layout({ active, children }) {
       >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-            {/* <Typography
-              variant="h1"
-              component={Link}
-              href="/"
-              sx={(theme) => ({
-                mr: 2,
-                flexGrow: 1,
-                display: { xs: "flex" },
-                fontSize: { xs: "1.5rem", md: "1.5rem", lg: "2rem" },
-                fontWeight: 300,
-                letterSpacing: ".3rem",
-                // color: '#fff',
-                textDecoration: "none",
-              })}
-            >
-              Moorthi Engineering Limited
-            </Typography> */}
-
             <Link href={"/"} style={{ marginTop: "1rem" }}>
               <img
                 src={Logo.src}
@@ -106,44 +107,6 @@ export default function Layout({ active, children }) {
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <SideMenu />
-              {/* <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleOpenNavMenu}
-                color="inherit"
-                // sx={{ color: "#d6d6d6" }}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: "flex", md: "none" },
-                }}
-              >
-                {pages.map((page) => (
-                  <MenuItem
-                    key={`${page.name}-page`}
-                    onClick={handleRouteChange(page.url)}
-                  >
-                    <Typography textAlign="center">{page.name}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu> */}
             </Box>
 
             <Box

@@ -1,13 +1,26 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import createEmotionServer from '@emotion/server/create-instance';
-import theme from '../src/theme';
-import createEmotionCache from '../src/createEmotionCache';
+import Document, { Html, Head, Main, NextScript } from "next/document";
+import createEmotionServer from "@emotion/server/create-instance";
+import theme from "../src/theme";
+import createEmotionCache from "../src/createEmotionCache";
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head />
+        <link rel="shortcut icon" href="/favicon.ico" />
+
+        <meta name="robots" content="all" />
+        <meta
+          property="og:title"
+          content="Moorthi Engineering Limited Auckland"
+        />
+        <meta
+          property="og:description"
+          content="Moorthi Engineering Limited providing Welding, Fabricating, Fitting, and Rigging services throughout Auckland "
+        />
+        <meta property="og:image" content="https://moorthi.co.nz/2.png" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link
           rel="preconnect"
@@ -71,7 +84,7 @@ MyDocument.getInitialProps = async (ctx) => {
   const emotionStyles = extractCriticalToChunks(initialProps.html);
   const emotionStyleTags = emotionStyles.styles.map((style) => (
     <style
-      data-emotion={`${style.key} ${style.ids.join(' ')}`}
+      data-emotion={`${style.key} ${style.ids.join(" ")}`}
       key={style.key}
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: style.css }}
