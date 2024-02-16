@@ -182,7 +182,8 @@ export default function Layout({ active, title, description, children }) {
       <footer>
         <Box
           sx={{
-            borderTop: "solid #323a42",
+            borderTop: "solid #cfcfcf",
+            borderWidth: "1px",
             padding: "3rem 1rem",
             marginTop: "5rem",
           }}

@@ -4,6 +4,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Animation from "./Animation";
 import { useRouter } from "next/router";
+import Video from "./Video";
 
 export default function Hero() {
   const theme = useTheme();
@@ -81,38 +82,16 @@ export default function Hero() {
             </Grid>
 
             <Grid item>
-              <Button variant="outlined" onClick={handleRouteChange("contact")}>
+              <Button
+                variant="contained"
+                onClick={handleRouteChange("contact")}
+              >
                 Contact us
               </Button>
             </Grid>
           </Grid>
         </div>
-        <video
-          autoPlay
-          muted
-          loop
-          id="hero"
-          style={{
-            // marginTop: "8rem",
-            // position: "fixed",
-            zIndex: -1,
-            height: "auto",
-            maxHeight: "80vh",
-            minHeight: "40vh",
-            width: "100vw",
-            objectFit: "cover",
-            // backgroundPosition: "center",
-            opacity: 0.7,
-            left: 0,
-            top: 0,
-            bottom: 0,
-            // filter: "grayscale(80%)",
-            // clipPath: "polygon(28% 0, 100% 0, 95% 100%, 0% 100%)",
-            // borderRadius: "4%",
-          }}
-        >
-          <source src="video.mp4" type="video/mp4" />
-        </video>
+        <Video />
       </div>
     </>
   );
