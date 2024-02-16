@@ -111,6 +111,7 @@ export default function Home() {
                   <Image
                     alt="Photo of a welder"
                     src={ph18}
+                    loading="eager"
                     width={matchesMd ? 300 : 520}
                     height={matchesMd ? 300 : 520}
                   />

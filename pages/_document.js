@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
-import theme from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
 
 export default class MyDocument extends Document {
@@ -31,6 +30,7 @@ export default class MyDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         ></link>
+
         <body>
           <Main />
           <NextScript />
