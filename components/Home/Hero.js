@@ -37,7 +37,7 @@ export default function Hero() {
           >
             <Grid item>
               <Typography
-                variant="h1"
+                variant="h2"
                 sx={{
                   color: "#fff",
                   opacity: 1,
@@ -56,7 +56,7 @@ export default function Hero() {
 
             <Grid item>
               <Typography
-                variant="h1"
+                variant="h2"
                 sx={{
                   color: "#fff",
                   opacity: 1,
