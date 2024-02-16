@@ -74,12 +74,15 @@ export default function Layout({ active, title, description, children }) {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={addJsonLd()}
-          key="product-jsonld"
-        />
       </Head>
+
+      <Script
+        id="jsonld"
+        strategy="afterInteractive"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={addJsonLd()}
+        key="product-jsonld"
+      />
 
       <AppBar
         position="static"
@@ -94,6 +97,7 @@ export default function Layout({ active, title, description, children }) {
           <Toolbar disableGutters>
             <Link href={"/"} style={{ marginTop: "1rem" }}>
               <Image
+                alt="Logo of Moorthi Engineering Limited Auckland"
                 src={Logo.src}
                 width={matchesMD ? "100" : "100"}
                 height={matchesMD ? "100" : "100"}

@@ -5,7 +5,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Image from "next/image";
 
-export default function CircleCard({ image }) {
+export default function CircleCard({ image, alt }) {
   const theme = useTheme();
   const matchesMd = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -13,15 +13,9 @@ export default function CircleCard({ image }) {
     <>
       <Fade in timeout={1000}>
         <Card sx={{ borderWidth: "0" }} variant="outlined">
-          {/* <CardMedia
-            component="img"
-            alt="work"
-            height={matchesMd ? "240" : "240"}
-            image={image}
-            sx={{ borderRadius: "100%", borderWidth: "0" }}
-          /> */}
           <Image
             src={image}
+            alt={alt}
             width={matchesMd ? 240 : 240}
             height={matchesMd ? 240 : 240}
             style={{

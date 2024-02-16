@@ -109,6 +109,7 @@ export default function Home() {
               >
                 <CardActionArea>
                   <Image
+                    alt="Photo of a welder"
                     src={ph18}
                     width={matchesMd ? 300 : 520}
                     height={matchesMd ? 300 : 520}
@@ -169,7 +170,10 @@ export default function Home() {
                   <Grid item>
                     <Grid container direction={"column"} spacing={4}>
                       <Grid item>
-                        <CircleCard image={ph14.src} />
+                        <CircleCard
+                          image={ph14.src}
+                          alt="Marine welding photo"
+                        />
                       </Grid>
                       <Grid item>
                         <Typography
@@ -185,7 +189,10 @@ export default function Home() {
                   <Grid item>
                     <Grid container direction={"column"} spacing={4}>
                       <Grid item>
-                        <CircleCard image={ph13.src} />
+                        <CircleCard
+                          image={ph13.src}
+                          alt="Construction welding photo"
+                        />
                       </Grid>
                       <Grid item>
                         <Typography
@@ -201,7 +208,10 @@ export default function Home() {
                   <Grid item>
                     <Grid container direction={"column"} spacing={4}>
                       <Grid item>
-                        <CircleCard image={ph15.src} />
+                        <CircleCard
+                          image={ph15.src}
+                          alt="Architectural welding photo"
+                        />
                       </Grid>
 
                       <Grid item>
@@ -218,7 +228,10 @@ export default function Home() {
                   <Grid item>
                     <Grid container direction={"column"} spacing={4}>
                       <Grid item>
-                        <CircleCard image={ph16.src} />
+                        <CircleCard
+                          image={ph16.src}
+                          alt="Residential welding photo"
+                        />
                       </Grid>
 
                       <Grid item>
