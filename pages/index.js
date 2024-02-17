@@ -126,9 +126,9 @@ export default function Home() {
             </Typography>
             <br />
             <Typography>
-              Founded in 2017, Moorthi Engineering Limited has swiftly emerged
-              as a trailblazing force in the welding industry, setting new
-              standards of excellence and innovation.
+              Moorthi Engineering Limited Welders, Fabricators, Fitters, and
+              Riggers swiftly emerged as a trailblazing force in the industry,
+              setting new standards of excellence and innovation.
               <br /> With a commitment to precision and a passion for quality
               craftsmanship, Moorthi Engineering Limited has become synonymous
               with reliable and cutting-edge welding solutions. From its
